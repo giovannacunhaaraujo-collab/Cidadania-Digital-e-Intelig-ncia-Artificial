@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Cidadania Digital: Deepfakes e Desinformação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <h1>Cidadania Digital & IA</h1>
+            <button id="theme-toggle" class="btn-toggle" aria-label="Alternar modo escuro">🌓 Modo Escuro</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção de Contextualização -->
+        <section class="hero-section">
+            <h2>O Impacto das Deepfakes na Sociedade</h2>
+            <p>Com o avanço da Inteligência Artificial, a criação de mídias manipuladas (deepfakes) tornou-se extremamente realista. Compreender e identificar essas tecnologias é fundamental para exercer uma cidadania digital segura e consciente.</p>
+        </section>
+
+        <!-- Seção Educativa: Como Identificar -->
+        <section class="tips-section">
+            <h2>Como Identificar Mídias Manipuladas?</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>👁️ Piscadas Irregulares</h3>
+                    <p>Muitas ferramentas de IA ainda falham em reproduzir o ritmo natural de piscadas dos olhos humanos.</p>
+                </div>
+                <div class="card">
+                    <h3>🗣️ Sincronia de Áudio</h3>
+                    <p>Preste atenção se os movimentos dos lábios correspondem perfeitamente às palavras pronunciadas.</p>
+                </div>
+                <div class="card">
+                    <h3>🖼️ Bordas e Texturas</h3>
+                    <p>Verifique o contorno do rosto, orelhas e cabelos. Desfocados ou sombras estranhas indicam manipulação.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Interativa: Quiz Anti-Desinformação -->
+        <section class="quiz-section">
+            <h2>Desafio Interativo: Você Sabe Detectar Mentiras?</h2>
+            <p>Responda às perguntas abaixo e teste seus conhecimentos sobre desinformação automatizada.</p>
+            
+            <form id="quiz-form">
+                <div class="form-group">
+                    <label>1. Qual é a principal característica de uma Deepfake?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="q1" value="correto" required> Alteração realista de rostos ou vozes usando IA.</label>
+                        <label><input type="radio" name="q1" value="errado"> Uma foto tirada com câmera profissional antiga.</label>
+                        <label><input type="radio" name="q1" value="errado"> Um texto jornalístico traduzido para outro idioma.</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>2. Como os robôs (bots) propagam desinformação em massa?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="q2" value="errado"> Enviando cartas manuscritas pelos correios.</label>
+                        <label><input type="radio" name="q2" value="correto"> Compartilhando links falsos de forma automatizada e rápida.</label>
+                        <label><input type="radio" name="q2" value="errado"> Corrigindo erros gramaticais em redes sociais.</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Verificar Respostas</button>
+            </form>
+
+            <!-- Div que será manipulada via JS para exibir resultados -->
+            <div id="quiz-result" class="result-box hidden">
+                <h3>Resultado do seu Desafio:</h3>
+                <p id="result-text"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 - Projeto de Conscientização Comunitária. Desenvolvido para a disciplina de Educação Digital e IA.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
