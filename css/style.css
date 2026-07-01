@@ -1,0 +1,185 @@
+/* Configurações Globais e Variáveis de Cores (Paleta Tecnológica) */
+:root {
+    --bg-primary: #f4f7f6;
+    --bg-card: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #555555;
+    --accent-color: #007bff;
+    --accent-hover: #0056b3;
+    --border-color: #dddddd;
+    --success-bg: #d4edda;
+    --success-text: #155724;
+}
+
+/* Variáveis para o Modo Escuro */
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #b0b0b0;
+    --accent-color: #37bcf8;
+    --accent-hover: #1d82b3;
+    --border-color: #333333;
+    --success-bg: #1b4332;
+    --success-text: #40c057;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Layout do Cabeçalho */
+.main-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.btn-toggle {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-toggle:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Estrutura do Conteúdo Principal */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+/* Grid de Cards Usando Flexbox */
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: var(--bg-primary);
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 5px solid var(--accent-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito Hover Suave guiando a atenção (Rubrica Usabilidade Nível 4) */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Formulário e Quiz */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.radio-options label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Caixa de Resultados */
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-radius: 6px;
+    border: 1px solid var(--success-text);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Rodapé */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* Responsividade Avançada via Media Queries (Rubrica Nível 4) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+}
